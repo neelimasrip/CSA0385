@@ -1,0 +1,23 @@
+include<stdio.h>
+int main()
+{
+    int i,j,temp,arr[]={1,5,2,4,9};
+    int n=4;
+    for(i=0;i<=n;i++)
+    {
+        printf("\n %d",arr[i]);
+    }
+    for(i=0;i<=n;i++)
+    {
+        for(j=i+1;j<=n;j++)
+        if(arr[i]>arr[j])
+        {
+            temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+        }
+    }
+    for(i=0;i<=n;i++)
+    printf("\n sorted array is %d",arr[i]);
+    printf("\n second heighest number is %d",arr[i-2]);
+}
