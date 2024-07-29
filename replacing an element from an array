@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int arr[]={1,2,3,4,5};
+    int index=2;
+    int newelement=30;
+    
+    arr[index]=newelement;
+    for(int i=0;i<5;i++){
+        printf("%d\t",arr[i]);
+    }
+    return 0;
+}
