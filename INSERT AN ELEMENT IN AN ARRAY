@@ -1,31 +1,29 @@
 #include <stdio.h>
-int main() {
-    int arr[] = {1, 2, 3, 4, 5}; 
-    int size = 5; 
-    int element, position;
-    printf("Current elements in the array: ");
-    for (int i = 0; i < size; ++i) {
-        printf("%d ", arr[i]);
+int main()
+{
+    int array[15];
+    int i, n, x, pos;
+    printf("Enter the number of elements in the array \n");
+    scanf("%d", &n);
+    printf("Enter the elements \n");
+    for (i = 0; i < n; i++)
+        scanf("%d", &array[i]);
+        printf("Input array elements are: \n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", array[i]);
     }
-    printf("\n");
-    printf("Enter the element to insert: ");
-    scanf("%d", &element);
-    printf("Enter the position (0 to %d) to insert the element: ", size);
-    scanf("%d", &position);
-    if (position < 0 || position > size) {
-        printf("Error: Invalid position.\n");
-        return 1;
+    printf("\nEnter the new element to be inserted: ");
+    scanf("%d", &x);
+    printf("Enter the position where element is to be inserted: ");
+    scanf("%d", &pos);
+    n=n+1;
+    for(i = n-1; i >= pos; i--)
+        array[i]=array[i-1];
+        array[pos-1]=x;
+       for (i = 0; i < n; i++)
+    {
+        printf("%d ", array[i]);
     }
-    for (int i = size; i > position; --i) {
-        arr[i] = arr[i - 1];
-    }
-    arr[position] = element;
-    size++;
-    printf("Updated elements in the array: ");
-    for (int i = 0; i < size; ++i) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
     return 0;
 }
-
