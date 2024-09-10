@@ -1,0 +1,30 @@
+FIND ODD OR EVEN NUMBERS FROM A GIVEN SET OF NUMBERS
+
+#include <stdio.h>
+void findOddEven(int arr[], int n) {
+    printf("Even numbers: ");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            printf("%d ", arr[i]);
+        }
+    }
+    printf("\nOdd numbers: ");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 != 0) {
+            printf("%d ", arr[i]);
+        }
+    }
+    printf("\n");
+}
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    findOddEven(arr, n);
+    return 0;
+}
