@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){    
+int firstmatrix[2][3],secondmatrix[2][3],resultmatrix[2][3];
+    printf("enter the first matrix:");
+for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+ scanf("%d",&firstmatrix[i][j]);
+        }
+ printf("enter the second matrix:");
+    for(int i=0;i<2;i++){
+        for(int j=0;j<3;j++){
+scanf("%d",&secondmatrix[i][j]);
+        }
+}
+    for(int i=0;i<2;i++){
+ for(int j=0;j<3;j++){
+            resultmatrix[i][j]=firstmatrix[i][j]*secondmatrix[i][j];
+}
+}
+ printf("resultant matrix:");
+    for(int i=0;i<2;i++){
+for(int j=0;j<3;j++){
+            printf("%d",resultmatrix[i][j]);
+ }
+        printf("\n");
+}
+    return 0;
+}
