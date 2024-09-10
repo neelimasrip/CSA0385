@@ -1,0 +1,53 @@
+def turn_off_fan():
+    print("Fan has been turned off.")
+
+def increase_temperature(current_temp, amount):
+    new_temp = current_temp + amount
+    print(f"Temperature increased to {new_temp}°C.")
+    return new_temp
+
+def decrease_temperature(current_temp, amount):
+    new_temp = current_temp - amount
+    print(f"Temperature decreased to {new_temp}°C.")
+    return new_temp
+
+def lock_door():
+    print("Door has been locked.")
+
+def unlock_door():
+    print("Door has been unlocked.")
+
+def main():
+    temperature = 22  # Starting temperature in °C
+
+    while True:
+        print("\nAvailable commands:")
+        print("1. Turn off fan")
+        print("2. Increase temperature")
+        print("3. Decrease temperature")
+        print("4. Lock door")
+        print("5. Unlock door")
+        print("6. Exit")
+
+        choice = input("Enter your choice (1-6): ")
+
+        if choice == '1':
+            turn_off_fan()
+        elif choice == '2':
+            amount = float(input("Enter amount to increase temperature by (in °C): "))
+            temperature = increase_temperature(temperature, amount)
+        elif choice == '3':
+            amount = float(input("Enter amount to decrease temperature by (in °C): "))
+            temperature = decrease_temperature(temperature, amount)
+        elif choice == '4':
+            lock_door()
+        elif choice == '5':
+            unlock_door()
+        elif choice == '6':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 6.")
+
+if __name__ == "__main__":
+    main()

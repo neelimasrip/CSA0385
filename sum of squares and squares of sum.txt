@@ -1,0 +1,22 @@
+# Define the range
+n=int(input("enter the value of n:"))
+
+# Initialize variables
+sum_of_squares = 0
+sum_values = 0
+
+# Calculate sum of squares and sum of values
+for i in range(1, n + 1):
+    sum_of_squares += i ** 2
+    sum_values += i
+
+# Calculate square of the sum
+square_of_sum = sum_values ** 2
+
+# Calculate the difference
+difference = square_of_sum - sum_of_squares
+
+# Output the results
+print("Sum of Squares:", sum_of_squares)
+print("Square of the Sum:", square_of_sum)
+print("Difference:", difference)
